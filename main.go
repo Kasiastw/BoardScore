@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"sync/atomic"
 )
 
 type (
@@ -19,7 +18,7 @@ type (
 
 var id int64
 
-func (fs MatchStore) NewMatch(id int64, idGame int, hometeam string, awayteam string) footbalMatch {
+func NewMatch(id int64, idGame int, hometeam string, awayteam string) footbalMatch {
 	log.Printf("The match: %s vs %s started", hometeam, awayteam)
 	return footbalMatch{
 		id: id,
@@ -29,12 +28,12 @@ func (fs MatchStore) NewMatch(id int64, idGame int, hometeam string, awayteam st
 	}
 }
 
-func (fs MatchStore) updateScore(idGame int, team string, score int) []footbalMatch {
+func (fs MatchStore) updateScore(idGame int, team string, score int) {
 	count:= 0
 	for i :=range fs.store{
 		if fs.store[i].idGame == idGame {
 			if _, ok := fs.store[i].game[team]; ok {
-				id = atomic.AddInt64(&id, 1)
+				id++
 				fs.store[i].id = id
 				fs.store[i].game[team] = fs.store[i].game[team] + score
 				fs.store[i].sum = fs.store[i].sum + score
@@ -48,10 +47,9 @@ func (fs MatchStore) updateScore(idGame int, team string, score int) []footbalMa
 	if count==0{
 		log.Printf("[ERROR] There is no match with idGame=%v", idGame)
 	}
-	return fs.store
 }
 
-func (fs *MatchStore) finishMatch(idGame int) []footbalMatch {
+func (fs *MatchStore) finishMatch(idGame int) {
 	count:= 0
 	for i := 0; i < len(fs.store); i++ {
 		if fs.store[i].idGame==idGame {
@@ -64,10 +62,9 @@ func (fs *MatchStore) finishMatch(idGame int) []footbalMatch {
 	if count==0{
 		log.Printf("[ERROR] There is no match to finish with idGame=%v", idGame)
 	}
-	return fs.store
 }
 
-func (fs MatchStore) sort() []footbalMatch{
+func (fs MatchStore) sort() {
 	ok := false
 	for !ok {
 		ok = true
@@ -86,17 +83,17 @@ func (fs MatchStore) sort() []footbalMatch{
 		}
 	}
 	log.Println("sorted board score", fs.store)
-	return fs.store
 	}
 
 func main()  {
 
 	teams := MatchStore{store: []footbalMatch{}}
-	teams.store = append(teams.store, teams.NewMatch(0, 0,  "Mexico", "Canada"))
-	teams.store = append(teams.store, teams.NewMatch(0, 1,  "Spain", "Brazil"))
-	teams.store = append(teams.store, teams.NewMatch(0, 2, "Germany", "France"))
-	teams.store = append(teams.store, teams.NewMatch(0, 3, "Uruguay", "Italy"))
-	teams.store = append(teams.store, teams.NewMatch(0, 4, "Argentina", "Australia"))
+	teams.store = append(teams.store, NewMatch(0, 0,  "Mexico", "Canada"))
+	teams.store = append(teams.store, NewMatch(0, 1,  "Spain", "Brazil"))
+	teams.store = append(teams.store, NewMatch(0, 2, "Germany", "France"))
+	teams.store = append(teams.store, NewMatch(0, 3, "Uruguay", "Italy"))
+	teams.store = append(teams.store, NewMatch(0, 4, "Argentina", "Australia"))
+	teams.store = append(teams.store, NewMatch(0, 5, "A", "A"))
 
 	teams.updateScore(1, "Spain", 2)
 	teams.updateScore(1, "Spain", 2)
