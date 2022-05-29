@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4c7f4b0-5406-49bc-bac8-031218b0f4ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/score/score_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/score/score.go" beforeDir="false" afterPath="$PROJECT_DIR$/score/score.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653833027341</updated>
       <workItem from="1653833029564" duration="5000" />
-      <workItem from="1653833557071" duration="5357000" />
+      <workItem from="1653833557071" duration="6345000" />
     </task>
     <servers />
   </component>

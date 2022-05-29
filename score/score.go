@@ -29,20 +29,26 @@ func (fs *MatchStore) AddMatch(id int64, idGame int, hometeam string, awayteam s
 	fs.Store = append(fs.Store, NewMatch(id, idGame, hometeam, awayteam))
 }
 
-func (fs MatchStore) UpdateScore(idGame int, team string, score int) {
+func (fs MatchStore) UpdateScore(idGame int, hometeam string, awayteam string, scoreHomeTeam int, scoreAwayTeam int ) {
 	count:= 0
 	for i :=range fs.Store {
 		if fs.Store[i].idGame == idGame {
-			if _, ok := fs.Store[i].game[team]; ok {
-				id++
-				fs.Store[i].id = id
-				fs.Store[i].game[team] = fs.Store[i].game[team] + score
-				fs.Store[i].sum = fs.Store[i].sum + score
-				count++
-				log.Printf("A gol for %s => The current score is %v", team, fs.Store[i].game)
+			if _, ok := fs.Store[i].game[hometeam]; ok {
+				if _, ok := fs.Store[i].game[awayteam]; ok {
+					id++
+					fs.Store[i].id = id
+					fs.Store[i].game[hometeam] = fs.Store[i].game[hometeam] + scoreHomeTeam
+					fs.Store[i].game[awayteam] = fs.Store[i].game[awayteam] + scoreAwayTeam
+					fs.Store[i].sum = fs.Store[i].sum + scoreHomeTeam + scoreAwayTeam
+					count++
+					log.Printf("A gol for %s and %s  => The current score is %v", hometeam, awayteam, fs.Store[i].game)
+				} else {
+					log.Printf("[ERROR] There is no hometeam %s with idGame= %v", awayteam, idGame)
+				}
 			} else {
-				log.Printf("[ERROR] There is no team %s with idGame= %v", team, idGame)
-			}}
+				log.Printf("[ERROR] There is no team %s with idGame= %v", hometeam, idGame)
+			}
+		}
 	}
 	if count==0{
 		log.Printf("[ERROR] There is no match with idGame=%v", idGame)
