@@ -13,7 +13,6 @@ func main()  {
 	teams.AddMatch(0, 3, "Uruguay", "Italy")
 	teams.AddMatch(0, 4, "Argentina", "Australia")
 
-	//UpdateScore(idGame int, hometeam string, awayteam string, scoreHomeTeam int,scoreAwayTeam int )
 	teams.UpdateScore(1, "Spain", "Brazil",  2, 0)
 	teams.UpdateScore(1, "Spain", "Brazil",  2, 0)
 	teams.UpdateScore(1, "Spain", "Brazil",  2, 0)
@@ -21,14 +20,6 @@ func main()  {
 	teams.UpdateScore(2, "Germany", "France", 5, 0)
 	teams.UpdateScore(3, "Uruguay", "Italy", 2, 0)
 	teams.UpdateScore(4, "Argentina", "Australia", 10, 0)
-
-	//teams.UpdateScore(1, "Spain", 2)
-	//teams.UpdateScore(1, "Spain", 2)
-	//teams.UpdateScore(1, "Spain", 2)
-	//teams.UpdateScore(0, "Mexico", 6)
-	//teams.UpdateScore(2, "Germany", 5)
-	//teams.UpdateScore(3, "Uruguay", 2)
-	//teams.UpdateScore(4, "Argentina", 10)
 
 	teams.FinishMatch(3)
 	//teams.FinishMatch(4)

@@ -20,7 +20,6 @@ func (fs MatchStore) updateScore(idGame int, hometeam string, awayteam string, s
 	return fs.Store
 }
 
-
 func (fs *MatchStore) finishMatch(idGame int) []FootbalMatch {
 	for i := 0; i < len(fs.Store); i++ {
 		if fs.Store[i].idGame==idGame {
