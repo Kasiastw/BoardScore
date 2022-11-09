@@ -18,9 +18,9 @@ An example, being the current data in the system:
 
 
 The summary would provide with the following information:
+
 |Board score |
 |:----:|:----|
-| **Database RAW**  |  A database storing raw session data. Each of the registered domains has an independent scheme.   |
  | 1. | Uruguay 6 - Italy 6 |
  | 2. | Spain 10 - Brazil 2 |
  | 3. | Mexico 0 - Canada 5 |
