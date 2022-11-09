@@ -1,6 +1,6 @@
 # Football World Cup Score Board
 
-It is the simple implementation that follows the requirements:
+It is the simple implementation (without RestApi ) that follows the requirements:
 
 1) When the game starts, it should capture (being initial score 0-0):
   * home team 
@@ -18,8 +18,11 @@ An example, being the current data in the system:
 
 
 The summary would provide with the following information:
- * 1. Uruguay 6 - Italy 6
- * 2. Spain 10 - Brazil 2
- * 3. Mexico 0 - Canada 5
- * 4. Argentina 3 - Australia 1
- * 5. Germany 2 - France 2
+|Board score |
+|:----:|:----|
+| **Database RAW**  |  A database storing raw session data. Each of the registered domains has an independent scheme.   |
+ | 1. | Uruguay 6 - Italy 6 |
+ | 2. | Spain 10 - Brazil 2 |
+ | 3. | Mexico 0 - Canada 5 |
+ | 4. | Argentina 3 - Australia 1|
+ | 5. | Germany 2 - France 2|
