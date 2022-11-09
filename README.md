@@ -6,15 +6,15 @@ It is the simple implementation (without RestApi ) that follows the requirements
   * home team 
   * away team 
 2) When the game finishes. It will remove a match from the scoreboard.
-3) When it is received the pair score; home team score and away team score should update a game      score
+3) When it is received the pair score; home team score and away team score should update a game score
 4. Get a summary of games by total score.
 
 An example, being the current data in the system:
-  a) Mexico - Canada: 0 - 5
-  b) Spain - Brazil: 10 – 2
-  c) Germany - France: 2 – 2,
-  d) Uruguay - Italy: 6 – 6,
-  e) Argentina - Australia: 3 – 1
+  * Mexico - Canada: 0 - 5
+  * Spain - Brazil: 10 – 2
+  * Germany - France: 2 – 2,
+  * Uruguay - Italy: 6 – 6,
+  * Argentina - Australia: 3 – 1
 
 The summary would provide with the following information:
  1. Uruguay 6 - Italy 6 
