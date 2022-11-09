@@ -10,9 +10,8 @@ It is the simple implementation that follows the requirements:
 4. Get a summary of games by total score.
 
 An example, being the current data in the system:
-
-a. Mexico - Canada: 0 - 5
-b. Spain - Brazil: 10 – 2
-c. Germany - France: 2 – 2
-d. Uruguay - Italy: 6 – 6
-e. Argentina - Australia: 3 – 1
+Mexico - Canada: 0 - 5
+Spain - Brazil: 10 – 2,
+Germany - France: 2 – 2,
+Uruguay - Italy: 6 – 6,
+Argentina - Australia: 3 – 1
