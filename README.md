@@ -1,6 +1,6 @@
 # Football World Cup Score Board
 
-It is the simple implementation (without RestApi ) that follows the requirements:
+It is just the simple implementation (without RestApi, Web Service or Microservice) that follows the requirements:
 
 1) When the game starts, it should capture (being initial score 0-0):
   * home team 
