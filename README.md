@@ -10,11 +10,11 @@ It is the simple implementation (without RestApi ) that follows the requirements
 4. Get a summary of games by total score.
 
 An example, being the current data in the system:
- a) Mexico - Canada: 0 - 5
- b) Spain - Brazil: 10 – 2
- c) Germany - France: 2 – 2,
- d) Uruguay - Italy: 6 – 6,
- e) Argentina - Australia: 3 – 1
+  a) Mexico - Canada: 0 - 5
+  b) Spain - Brazil: 10 – 2
+  c) Germany - France: 2 – 2,
+  d) Uruguay - Italy: 6 – 6,
+  e) Argentina - Australia: 3 – 1
 
 The summary would provide with the following information:
  1. Uruguay 6 - Italy 6 
