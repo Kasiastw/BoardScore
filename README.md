@@ -15,3 +15,11 @@ An example, being the current data in the system:
  c) Germany - France: 2 – 2,
  d) Uruguay - Italy: 6 – 6,
  e) Argentina - Australia: 3 – 1
+
+
+The summary would provide with the following information:
+ * 1. Uruguay 6 - Italy 6
+ * 2. Spain 10 - Brazil 2
+ * 3. Mexico 0 - Canada 5
+ * 4. Argentina 3 - Australia 1
+ * 5. Germany 2 - France 2
